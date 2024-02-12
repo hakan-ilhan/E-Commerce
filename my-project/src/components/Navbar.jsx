@@ -17,7 +17,7 @@ import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 function Navbar() {
   return (
     <div>
-      <div className="max-w-[1920px] bg-navBar h-16  m-auto flex px-9 items-center justify-between text-white flex-wrap font-medium">
+      <div className="max-w-[1920px]  bg-navBar h-16  m-auto flex px-9 items-center justify-between text-white flex-wrap font-medium">
         <div className="flex gap-10">
           <div className=" flex gap-3 items-center">
             <FontAwesomeIcon icon={faPhone} />
@@ -33,7 +33,7 @@ function Navbar() {
         </div>
         <div className="flex items-center gap-4 ">
           <p>Follow Us :</p>
-          <div className="flex gap-5    ">
+          <div className="flex gap-3    ">
             <a href="">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
@@ -49,7 +49,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1920px] h-16 flex justify-between px-9 items-center m-auto pt-6 pb-3">
+      <div className="max-w-[1920px] h-16 flex justify-between px-9 items-center m-auto pt-6 pb-6">
         <div className="flex gap-16 items-center">
           <h3 className="font-mont text-3xl">BrandName</h3>
           <div className="flex gap-8 text-aTag text-lg">

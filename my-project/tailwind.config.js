@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundColor: {
         navBar: "#252B42",
+        headerShop: "#2DC071",
       },
       colors: {
         aTag: "#737373",
