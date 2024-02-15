@@ -35,7 +35,7 @@ function Slider2() {
           />
         </div>
         <div className="w-[70%] h-full flex items-end relative">
-          <div className="flex items-center  justify-between ">
+          <div className="flex items-center  justify-between flex-wrap">
             <div className="flex flex-col gap-6 w-[44%]">
               <h5 className="font-mont font-bold tracking-[0.2px]">
                 SUMMER 2020

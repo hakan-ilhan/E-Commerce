@@ -17,9 +17,9 @@ function CategoryCard() {
             Problems trying to resolve the conflict between{" "}
           </p>
         </div>
-        <div className="flex gap-7 m-auto">
+        <div className="flex gap-7 m-auto flex-wrap">
           <div
-            className="w-[500px] h-[500px] bg-no-repeat bg-cover cursor-pointer m-auto"
+            className="max-w-[500px] h-[500px] bg-no-repeat bg-cover cursor-pointer m-auto"
             style={{ backgroundImage: `url(${Card1})` }}
           >
             <NavLink to="/" className="inline-block w-[500px] h-[500px] ">

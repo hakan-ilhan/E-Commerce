@@ -15,6 +15,8 @@ export default {
         mutedCcolor: "#BDBDBD",
         dolar: "#23856D",
         alertColor: "#E77C40",
+        navBar: "#252B42",
+        disabled: "#8EC2F2",
       },
     },
     fontFamily: {
