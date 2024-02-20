@@ -4,6 +4,7 @@ import {
   faEnvelope,
   faShoppingCart,
   faMagnifyingGlass,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import {
@@ -18,7 +19,7 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <div className="bg-navBar w-full">
+      <div className="bg-navBar w-full sm:hidden">
         <div className="max-w-[1440px]   h-16  m-auto flex px-9 items-center justify-between text-white flex-wrap font-medium">
           <div className="flex gap-10">
             <div className=" flex gap-3 items-center">
@@ -53,46 +54,49 @@ function Navbar() {
         </div>
       </div>
       <div className="bg-147 w-full">
-        <div className="max-w-[1440px] h-16 flex justify-between px-9 items-center m-auto pt-6 pb-6 ">
-          <div className="flex gap-16 items-center">
-            <h3 className="font-mont text-3xl">BrandName</h3>
-            <div className="flex gap-8 text-aTag text-lg">
-              <NavLink to="/" className="hover:text-black" href="">
-                Home
-              </NavLink>
-              <a className="hover:text-black" href="">
-                Shop
-              </a>
-              <a className="hover:text-black" href="">
-                About
-              </a>
-              <a className="hover:text-black" href="">
-                Blog
-              </a>
-              <a className="hover:text-black" href="">
-                Contact
-              </a>
-              <a className="hover:text-black" href="">
-                Pages
-              </a>
-            </div>
+        <div className="max-w-[1440px] h-16 flex justify-between px-9 items-center m-auto pt-6 pb-6  sm:flex-wrap sm:pb-[500px] sm:gap-y-12">
+          <div className="flex gap-16 items-center sm:order-1">
+            <h3 className="font-mont text-3xl">Bandage</h3>
           </div>
-          <div className="flex gap-14 text-primaryColor">
-            <div className="flex gap-3 items-center">
+          <div className="flex gap-8 text-aTag text-lg sm:order-3 sm:flex-col sm:m-auto sm:w-full sm:items-center">
+            <NavLink to="/" className="hover:text-black font-bold" href="">
+              Home
+            </NavLink>
+            <a className="hover:text-black font-bold" href="">
+              Shop
+            </a>
+            <a className="hover:text-black font-bold" href="">
+              About
+            </a>
+            <a className="hover:text-black font-bold" href="">
+              Blog
+            </a>
+            <a className="hover:text-black font-bold" href="">
+              Contact
+            </a>
+            <a className="hover:text-black font-bold" href="">
+              Pages
+            </a>
+          </div>
+          <div className="flex gap-14 text-primaryColor sm:order-2">
+            <div className="flex gap-3 items-center sm:hidden">
               <FontAwesomeIcon icon={faUser} />
               <button>Login</button>
               <p>/</p>
               <button> Register</button>
             </div>
-            <div className="flex gap-10 items-center">
+            <div className="flex gap-10 items-center sm:text-2xl sm:text-aTag sm:gap-7">
               <a href="">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </a>
               <a href="">
                 <FontAwesomeIcon icon={faShoppingCart} />
               </a>
-              <a href="">
+              <a className="sm:hidden" href="">
                 <FontAwesomeIcon icon={faHeart} />
+              </a>
+              <a className="sm:inline-block hidden" href="">
+                <FontAwesomeIcon icon={faBars} />
               </a>
             </div>
           </div>
