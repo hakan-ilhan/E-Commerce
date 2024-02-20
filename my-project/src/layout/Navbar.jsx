@@ -13,12 +13,13 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <div>
       <div className="bg-navBar w-full">
-        <div className="max-w-[1920px]   h-16  m-auto flex px-9 items-center justify-between text-white flex-wrap font-medium">
+        <div className="max-w-[1440px]   h-16  m-auto flex px-9 items-center justify-between text-white flex-wrap font-medium">
           <div className="flex gap-10">
             <div className=" flex gap-3 items-center">
               <FontAwesomeIcon icon={faPhone} />
@@ -51,14 +52,14 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="bg-lightGrey w-full">
-        <div className="max-w-[1920px] h-16 flex justify-between px-9 items-center m-auto pt-6 pb-6 ">
+      <div className="bg-147 w-full">
+        <div className="max-w-[1440px] h-16 flex justify-between px-9 items-center m-auto pt-6 pb-6 ">
           <div className="flex gap-16 items-center">
             <h3 className="font-mont text-3xl">BrandName</h3>
             <div className="flex gap-8 text-aTag text-lg">
-              <a className="hover:text-black" href="">
+              <NavLink to="/" className="hover:text-black" href="">
                 Home
-              </a>
+              </NavLink>
               <a className="hover:text-black" href="">
                 Shop
               </a>

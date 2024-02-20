@@ -31,7 +31,7 @@ function Slider() {
       ></div>
       <div
         onClick={prevImg}
-        className="text-white text-3xl absolute top-[50%] translate-x-0 translate-y-[-50%] left-5 rounded-full cursor-pointer "
+        className="text-white text-3xl absolute top-[50%] translate-x-0 translate-y-[-50%] ml-5 rounded-full cursor-pointer "
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </div>
@@ -62,7 +62,7 @@ function Slider() {
           We know how large objects will act, but things on a small scale.
         </h4>
         <NavLink
-          to="/"
+          to="/shop"
           className="bg-headerShop text-center font-mont font-semibold w-[38%] py-3"
         >
           SHOP NOW

@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div className=" text-aTag font-bold">
       <div className="max-w-[1920px] flex m-auto ">
-        <div className="flex gap-28 m-auto w-[70%] justify-center flex-wrap">
+        <div className="flex gap-28 m-auto w-[70%] justify-center flex-wrap py-24">
           <div className="flex flex-col gap-4 w-[242px] ">
             <h3 className="font-mont text-2xl font-bold text-black">
               Get In Touch

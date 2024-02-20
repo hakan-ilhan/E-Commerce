@@ -8,7 +8,7 @@ function Container() {
         <div>
           <img src={img} alt="" />
         </div>
-        <div className="flex flex-col gap-5 w-[21%]">
+        <div className="flex flex-col gap-5 w-[400px]">
           <h5 className="font-mont font-bold tracking-[0.1px] leading-6 text-mutedCcolor">
             SUMMER 2020
           </h5>

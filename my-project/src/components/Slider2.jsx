@@ -25,8 +25,8 @@ function Slider2() {
   };
 
   return (
-    <div className={`${colors[currentIndex]}  max-w-screen h-[791px]`}>
-      <div className="m-auto max-w-[1920px] h-[791px] flex justify-between items-center text-white">
+    <div className={`${colors[currentIndex]}   max-w-screen `}>
+      <div className="m-auto max-w-[1920px]  flex justify-between items-center text-white">
         <div>
           <FontAwesomeIcon
             className="text-3xl text-white ml-5 cursor-pointer"
