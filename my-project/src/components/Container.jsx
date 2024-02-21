@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 function Container() {
   return (
     <div>
-      <div className="flex gap-8 items-center justify-center flex-wrap m-auto max-w-[1440px]">
-        <div>
+      <div className="flex gap-8 items-center justify-center flex-wrap m-auto max-w-[1440px] sm:py-24">
+        <div className="sm:order-2">
           <img src={img} alt="" />
         </div>
-        <div className="flex flex-col gap-5 w-[400px]">
+        <div className="flex flex-col gap-5 w-[400px] sm:order-1 sm:w-[250px] sm:text-center">
           <h5 className="font-mont font-bold tracking-[0.1px] leading-6 text-mutedCcolor">
             SUMMER 2020
           </h5>

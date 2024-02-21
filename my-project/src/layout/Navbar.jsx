@@ -62,18 +62,22 @@ function Navbar() {
             <NavLink to="/" className="hover:text-black font-bold" href="">
               Home
             </NavLink>
-            <a className="hover:text-black font-bold" href="">
+            <NavLink to="/shop" className="hover:text-black font-bold" href="">
               Shop
-            </a>
-            <a className="hover:text-black font-bold" href="">
+            </NavLink>
+            <NavLink to="/about" className="hover:text-black font-bold" href="">
               About
-            </a>
+            </NavLink>
             <a className="hover:text-black font-bold" href="">
               Blog
             </a>
-            <a className="hover:text-black font-bold" href="">
+            <NavLink
+              to="/contact"
+              className="hover:text-black font-bold"
+              href=""
+            >
               Contact
-            </a>
+            </NavLink>
             <a className="hover:text-black font-bold" href="">
               Pages
             </a>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import img from "../assets/teamp.png";
-import img1 from "../assets/teamp1.png";
+import img1 from "../assets/eco.jfif";
 import img2 from "../assets/teamp2.png";
 import img3 from "../assets/teamp3.png";
 import img4 from "../assets/teamp4.png";
@@ -29,7 +29,7 @@ const images = [team, team1, team2, team3, team4, team5, team6, team7, team8];
 function Team() {
   return (
     <div>
-      <div className="max-w-[1100px] m-auto flex flex-col gap-7 items-center py-24">
+      <div className="max-w-[1100px] m-auto flex flex-col gap-7 items-center py-24 md:w-[350px] md:text-center">
         <h5 className="text-aTag  leading-6 font-bold tracking-[0.1px] text-center">
           WHAT WE DO
         </h5>
@@ -49,18 +49,34 @@ function Team() {
           </p>
         </div>
       </div>
-      <div className="max-w-[1440px] flex gap-3 m-auto">
+      <div className="max-w-[1440px] flex gap-3 m-auto md:flex-wrap md:w-[400px] ">
         <div>
           <img className="object-cover" src={img} alt="" />
         </div>
-        <div className="flex flex-col gap-3">
-          <div className="flex gap-3">
-            <img src={img1} alt="" />
-            <img src={img2} alt="" />
+        <div className="flex flex-col gap-3 ">
+          <div className="flex gap-3 md:w-full">
+            <img
+              className="lg:w-[48%] object-cover w-[361px] h-[260px]"
+              src={img1}
+              alt=""
+            />
+            <img
+              className="lg:w-[48%] object-cover md:h-[260px]"
+              src={img2}
+              alt=""
+            />
           </div>
-          <div className="flex gap-3">
-            <img src={img3} alt="" />
-            <img src={img4} alt="" />
+          <div className="flex gap-3 ">
+            <img
+              className="lg:w-[48%] object-cover md:h-[260px]"
+              src={img3}
+              alt=""
+            />
+            <img
+              className="lg:w-[48%] object-cover md:h-[260px]"
+              src={img4}
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -69,18 +85,18 @@ function Team() {
           Meet Our Team
         </h2>
       </div>
-      <div className="max-w-[1020px] flex flex-wrap gap-8 m-auto gap-y-48 py-24">
+      <div className="max-w-[1020px] flex flex-wrap gap-8 m-auto gap-y-48 py-24 md:gap-y-16">
         {images.map((item, index) => {
           return <OurTeam key={index} item={item} index={index} />;
         })}
       </div>
-      <div className="max-w-[800px] m-auto flex flex-col gap-8 items-center py-24">
+      <div className="max-w-[800px] m-auto flex flex-col gap-8 items-center py-24 md:w-[80%] md:text-center">
         <h2 className="font-bold text-4xl leading-10 tracking-[0.2px] text-categoryColor">
           Start your 14 days free trial
         </h2>
         <h6 className=" text-sm leading-5 tracking-[0.2px] text-aTag text-center">
-          Met minim Mollie non desert Alamo est sit cliquey dolor <br /> do met
-          sent. RELIT official consequent.
+          Met minim Mollie non desert Alamo est sit cliquey dolor{" "}
+          <br className="md:hidden" /> do met sent. RELIT official consequent.
         </h6>
         <NavLink
           to=""

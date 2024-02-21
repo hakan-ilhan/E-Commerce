@@ -29,15 +29,15 @@ function ProductDesc() {
           </NavLink>
         </div>
         <hr className="text-hr w-full" />
-        <div className="flex gap-8 justify-between">
-          <div className="border-r-8 border-b-8 rounded-md w-[325px] h-[382px]">
+        <div className="flex gap-32  flex-wrap md:W-[350px] md:m-auto md:gap-12">
+          <div className="border-r-8 border-b-8 rounded-md w-[325px] h-[382px] md:m-auto">
             <img
               className=" object-cover  border-border1 rounded-md w-full h-full"
               src={img}
               alt=""
             />
           </div>
-          <div className="text-aTag font-sm tracking-[0.2px] leading-5 flex flex-col gap-8 max-w-[380px]">
+          <div className="text-aTag font-sm tracking-[0.2px] leading-5 flex flex-col gap-8 max-w-[380px] md:m-auto">
             <h3 className="text-categoryColor text-3xl leading-8 font-bold">
               the quick fox jumps over{" "}
             </h3>
@@ -59,7 +59,7 @@ function ProductDesc() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-8 text-aTag">
+          <div className="flex flex-col gap-8 text-aTag md:m-auto">
             <h3 className="text-categoryColor text-3xl leading-8 font-bold">
               the quick fox jumps over{" "}
             </h3>

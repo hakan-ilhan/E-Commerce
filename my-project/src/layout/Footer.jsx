@@ -12,12 +12,12 @@ function Footer() {
   return (
     <div className=" text-aTag font-bold">
       <div className="max-w-[1920px] flex m-auto ">
-        <div className="flex gap-28 m-auto w-[70%] justify-center flex-wrap py-24">
-          <div className="flex flex-col gap-4 w-[242px] ">
+        <div className="flex gap-28 m-auto w-[70%] flex-wrap py-24 sm:flex-col md:gap-8">
+          <div className="flex flex-col gap-4 w-[230px] ">
             <h3 className="font-mont text-2xl font-bold text-black">
               Get In Touch
             </h3>
-            <p className="font-mont font-normal">
+            <p className="font-mont font-normal sm:w-[175px]">
               the quick fox jumps over the lazy dog
             </p>
             <div className="flex gap-4 text-primaryColor">
@@ -32,7 +32,7 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div className="flex flex-col gap-3 text-mont">
+          <div className="flex flex-col gap-3 text-mont w-[230px]">
             <h3 className="font-mont text-2xl font-bold text-black">
               Company info
             </h3>
@@ -41,7 +41,7 @@ function Footer() {
             <NavLink to="/">We are hiring</NavLink>
             <NavLink to="/">Blog</NavLink>
           </div>
-          <div className="flex flex-col gap-3 text-mont">
+          <div className="flex flex-col gap-3 text-mont w-[230px]">
             <h3 className="font-mont text-2xl font-bold text-black">
               Features
             </h3>
@@ -50,7 +50,7 @@ function Footer() {
             <NavLink to="/">Live Chat</NavLink>
             <NavLink to="/">Unlimited Support</NavLink>
           </div>
-          <div className="flex flex-col gap-3 text-mont">
+          <div className="flex flex-col gap-3 text-mont w-[230px]">
             <h3 className="font-mont text-2xl font-bold text-black">
               Resources
             </h3>

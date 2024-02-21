@@ -11,9 +11,9 @@ import img4 from "../assets/card-item-4.png";
 function ShopCards() {
   const data = [img, img1, img2, img3, img4];
   return (
-    <div className="w-full bg-lightGrey">
+    <div className=" bg-lightGrey">
       <div className="flex flex-col items-center justify-center max-w-[1920px] m-auto">
-        <div className="flex justify-between w-[1080px] h-[92px] items-center ">
+        <div className="flex justify-between w-[1080px] h-[92px] items-center md:w-full md:flex-col md:h-full md:py-12 md:gap-8">
           <h3 className="text-categoryColor text-2xl tracking-[0.1px] font-bold">
             Shop
           </h3>
@@ -37,7 +37,7 @@ function ShopCards() {
               <div
                 key={index}
                 style={{ backgroundImage: `url(${item})` }}
-                className="bg-cover w-[204px] h-[223px] m-auto"
+                className="bg-cover w-[204px] h-[223px] m-auto md:w-[330px]"
               >
                 <NavLink to="/" className="w-[204px] h-[223px] inline-block" />
               </div>

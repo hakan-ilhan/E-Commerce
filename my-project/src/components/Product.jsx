@@ -29,8 +29,8 @@ function Product() {
 
   return (
     <div className="max-w-full bg-lightGrey py-10">
-      <div className="max-w-[1400px] flex flex-col gap-5 m-auto px-3">
-        <div className="flex gap-3">
+      <div className="max-w-[1400px] flex flex-col gap-5 m-auto px-3 md:gap-12">
+        <div className="flex gap-3 md:m-auto">
           <NavLink to="/" className="text-sm font-bold tracking-[0.2px]">
             Home
           </NavLink>
@@ -41,23 +41,40 @@ function Product() {
             Shop
           </p>
         </div>
-        <div className="flex gap-12">
-          <div
-            className="w-[550px] h-[450px] bg-cover flex items-center justify-between duration-200"
-            style={{ backgroundImage: `url(${images[currentIndex]})` }}
-          >
-            <FontAwesomeIcon
-              className="text-4xl text-white ml-5"
-              icon={faChevronLeft}
-              onClick={prev}
-            />
-            <FontAwesomeIcon
-              className="text-4xl text-white mr-5"
-              icon={faChevronRight}
-              onClick={next}
-            />
+        <div className="flex gap-12 md:flex-wrap">
+          <div className="flex flex-col gap-4 md:m-auto">
+            <div
+              className="w-[550px] h-[450px] bg-cover flex items-center justify-between duration-200 md:w-[350px]"
+              style={{ backgroundImage: `url(${images[currentIndex]})` }}
+            >
+              <FontAwesomeIcon
+                className="text-4xl text-white ml-5"
+                icon={faChevronLeft}
+                onClick={prev}
+              />
+              <FontAwesomeIcon
+                className="text-4xl text-white mr-5"
+                icon={faChevronRight}
+                onClick={next}
+              />
+            </div>
+            <div className="flex gap-5">
+              {images.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    style={{ backgroundImage: `url(${item})` }}
+                    className={
+                      index === currentIndex
+                        ? "w-[100px] h-[75px] bg-cover opacity-[50%]"
+                        : "w-[100px] h-[75px] bg-cover"
+                    }
+                  ></div>
+                );
+              })}
+            </div>
           </div>
-          <div className="flex flex-col justify-between max-w-[420px]">
+          <div className="flex flex-col gap-8 max-w-[420px] md:m-auto md:w-[300px]">
             <h4 className="text-categoryColor text-xl tracking-[0.2px]">
               Floating Phone
             </h4>
@@ -112,21 +129,6 @@ function Product() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex gap-5">
-          {images.map((item, index) => {
-            return (
-              <div
-                key={index}
-                style={{ backgroundImage: `url(${item})` }}
-                className={
-                  index === currentIndex
-                    ? "w-[100px] h-[75px] bg-cover opacity-[50%]"
-                    : "w-[100px] h-[75px] bg-cover"
-                }
-              ></div>
-            );
-          })}
         </div>
       </div>
     </div>

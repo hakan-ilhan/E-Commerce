@@ -84,10 +84,10 @@ function About() {
       </div>
       <div
         style={{ backgroundImage: `url(${media})` }}
-        className="max-w-[989px] h-[540px] bg-no-repeat my-28  m-auto flex justify-center items-center rounded-2xl"
+        className="max-w-[989px] h-[540px] bg-no-repeat my-28  m-auto flex justify-center items-center rounded-2xl md:w-[78%] md:h-[316px] md:bg-center"
       >
         <FontAwesomeIcon
-          className="text-8xl  rounded-full text-primaryColor bg-white"
+          className="text-8xl  rounded-full text-primaryColor bg-white md:text-4xl"
           icon={faCirclePlay}
         />
       </div>
@@ -122,8 +122,8 @@ function About() {
         </div>
       </div>
       <div className="max-w-[1920px] flex m-auto">
-        <div className="bg-hoverColor flex justify-center items-center w-[1225px] text-white">
-          <div className="flex flex-col gap-8 font-bold w-[500px]">
+        <div className="bg-hoverColor flex justify-center items-center w-[1225px] text-white  md:h-[520px]">
+          <div className="flex flex-col gap-8 font-bold w-[500px] md:w-[65%] md:text-center">
             <h5 className="leading-6 tracking-[0.1px]">WORK WITH US</h5>
             <h2 className="leading-10 tracking-[0.2px] text-4xl">
               Now Let’s grow Yours
@@ -134,14 +134,14 @@ function About() {
             </p>
             <NavLink
               to="/"
-              className="rounded-md text-white px-10 py-4  border-white border-[1px] text-center w-[130px] "
+              className="rounded-md text-white px-10 py-4  border-white border-[1px] text-center w-[130px] md:m-auto"
             >
               Button
             </NavLink>
           </div>
         </div>
         <div>
-          <img className="object-cover w-[777px]" src={wom} alt="" />
+          <img className="object-cover w-[777px] md:hidden" src={wom} alt="" />
         </div>
       </div>
     </div>

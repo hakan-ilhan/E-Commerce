@@ -14,11 +14,11 @@ function Contact() {
   return (
     <div>
       <div className="max-w-[1400px] m-auto flex justify-between px-4 pb-12  items-center flex-wrap gap-24 ">
-        <div className="flex flex-col gap-8 w-[400px] sm:w-[330px] sm:items-center sm:m-auto">
-          <h5 className="text-categoryColor font-bold leading-6 tracking-[0.1px] sm:hidden">
+        <div className="flex flex-col gap-8 w-[400px] md:w-[80%] sm:items-center sm:m-auto sm:text-center md:gap-12">
+          <h5 className="text-categoryColor font-bold leading-6 tracking-[0.1px] md:text-xl">
             CONTACT US
           </h5>
-          <h1 className="text-6xl text-categoryColor font-bold leading-[80px] tracking-[0.2px] ">
+          <h1 className="text-6xl text-categoryColor font-bold leading-[80px] tracking-[0.2px] md:text-4xl">
             Get in touch today!
           </h1>
           <h4 className="text-xl leading-7 tracking-[0.2px] text-aTag sm:w-64 sm:text-center">
@@ -52,8 +52,8 @@ function Contact() {
           <img src={img} alt="" />
         </div>
       </div>
-      <div className="max-w-[607px] m-auto flex flex-col gap-16 text-center items-center py-24">
-        <h2 className="text-5xl text-categoryColor font-bold leading-10 tracking-[0.2px]">
+      <div className="max-w-[607px] m-auto flex flex-col gap-16 text-center items-center py-24 md:w-[80%]">
+        <h2 className="text-5xl text-categoryColor font-bold leading-10 tracking-[0.2px]  md:text-5xl">
           Get answers to all your questions.
         </h2>
         <p className="text-aTag text-xl tracking-[0.2px] leading-7">

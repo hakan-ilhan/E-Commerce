@@ -27,21 +27,21 @@ function Slider() {
     <div className="max-w-[1920px] h-[791px] relative m-auto ">
       <div
         style={{ backgroundImage: `url(${bgImg[currentIndex]})` }}
-        className="w-full h-full bg-cover duration-500"
+        className="w-full h-full bg-cover duration-500 sm:bg-center"
       ></div>
       <div
         onClick={prevImg}
-        className="text-white text-3xl absolute top-[50%] translate-x-0 translate-y-[-50%] ml-5 rounded-full cursor-pointer "
+        className="text-white text-3xl absolute top-[50%] translate-x-0 translate-y-[-50%] ml-5 rounded-full cursor-pointer z-10"
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </div>
       <div
         onClick={nextImg}
-        className="text-white text-3xl absolute top-[50%] translate-x-0 translate-y-[-50%] right-5 rounded-full cursor-pointer"
+        className="text-white text-3xl absolute top-[50%] translate-x-0 translate-y-[-50%] right-5 rounded-full cursor-pointer z-10"
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </div>
-      <div className="flex gap-1 absolute top-[95%] left-[40%] translate-x-[50%] translate-y-[-95%] justify-center">
+      <div className="flex gap-1 absolute top-[95%] left-[40%]  justify-center">
         {bgImg.map((i, index) => {
           return (
             <div
@@ -55,9 +55,11 @@ function Slider() {
           );
         })}
       </div>
-      <div className="flex flex-col gap-6 text-white absolute top-[45%] left-[13%]">
-        <h5 className="font-mont font-bold tracking-[0.2px]">SUMMER 2020</h5>
-        <h1 className="font-mont font-bold text-6xl trackin">NEW COLLECTION</h1>
+      <div className="flex flex-col gap-6 text-white absolute top-[45%] left-[13%] sm:w-[70%] sm:top-[30%] sm:left-0 sm:text-center">
+        <h5 className="font-mont font-bold tracking-[0.2px] ">SUMMER 2020</h5>
+        <h1 className="font-mont font-bold text-6xl trackin sm:w-[200px]">
+          NEW COLLECTION
+        </h1>
         <h4 className="font-mont font-normal text-xl w-[60%]">
           We know how large objects will act, but things on a small scale.
         </h4>

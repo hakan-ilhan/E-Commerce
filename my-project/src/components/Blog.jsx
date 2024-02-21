@@ -53,9 +53,9 @@ function Blog() {
           <h3 className="font-mont font-bold tracking-[0.2px] text-categoryColor text-4xl">
             Featured Posts
           </h3>
-          <p className="text-aTag font-mont font-normal tracking-[0.2px] text-center">
-            Problems trying to resolve the conflict between <br />
-            the two major realms of Classical physics: Newtonian mechanics{" "}
+          <p className="text-aTag font-mont font-normal tracking-[0.2px] text-center w-[400px] sm:w-[300px]">
+            Problems trying to resolve the conflict between the two major realms
+            of Classical physics: Newtonian mechanics{" "}
           </p>
         </div>
         <div className="flex gap-2 w-full flex-wrap m-auto">
@@ -63,7 +63,7 @@ function Blog() {
             return (
               <div
                 key={index}
-                className="w-[348px] flex flex-col gap-4 shadow-inner pb-8"
+                className="w-[348px] flex flex-col gap-4 shadow-inner pb-8 m-auto"
               >
                 <img
                   className="object-cover w-[348px] h-[300px]"

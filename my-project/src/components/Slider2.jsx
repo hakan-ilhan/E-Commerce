@@ -26,17 +26,17 @@ function Slider2() {
 
   return (
     <div className={`${colors[currentIndex]}   max-w-screen `}>
-      <div className="m-auto max-w-[1920px]  flex justify-between items-center text-white">
-        <div>
+      <div className="m-auto max-w-[1920px]  flex justify-between items-center text-white sm:h-[1500px] relative">
+        <div className="h-fit">
           <FontAwesomeIcon
             className="text-3xl text-white ml-5 cursor-pointer"
             icon={faChevronLeft}
             onClick={prev}
           />
         </div>
-        <div className="w-[70%] h-full flex items-end relative">
-          <div className="flex items-center  justify-between flex-wrap">
-            <div className="flex flex-col gap-6 w-[44%]">
+        <div className="w-[1344px]  flex items-end  sm:m-auto sm:h-full">
+          <div className="flex items-center  justify-between flex-wrap sm:text-center sm:w-[100%]">
+            <div className="flex flex-col gap-6 w-[44%] ">
               <h5 className="font-mont font-bold tracking-[0.2px]">
                 SUMMER 2020
               </h5>
@@ -47,8 +47,8 @@ function Slider2() {
                 We know how large objects will act, We know how are objects will
                 act, We know
               </h4>
-              <div className="flex items-center gap-4">
-                <h3 className="text-2xl font-bold font-mont tracking-[0.1px]">
+              <div className="flex items-center gap-4 flex-wrap sm:w-[200px] sm:m-auto sm:gap-8">
+                <h3 className="text-2xl font-bold font-mont tracking-[0.1px] sm:text-center sm:m-auto">
                   $16.48
                 </h3>
                 <NavLink
@@ -59,7 +59,7 @@ function Slider2() {
                 </NavLink>
               </div>
             </div>
-            <div className="flex gap-1 mt-[45%]">
+            <div className="flex gap-1 mt-[45%] sm:absolute sm:top-[90%]">
               {images.map((item, index) => {
                 return (
                   <div
@@ -74,7 +74,7 @@ function Slider2() {
               })}
             </div>
             <img
-              className="object-cover h-[685px] max-w-[500px] mt-4 duration-1000"
+              className="object-cover h-[685px] min-w-[350px] mt-4 duration-1000 "
               src={images[currentIndex]}
               alt=""
             />
