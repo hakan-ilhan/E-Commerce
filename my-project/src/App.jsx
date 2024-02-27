@@ -9,10 +9,14 @@ import ProductPage from "./pages/ProductPage";
 import AboutPage from "./pages/AboutPage";
 import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
+import Sign from "./components/Form";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Navbar />
       <Switch>
         <Route exact path="/">
@@ -32,6 +36,9 @@ function App() {
         </Route>
         <Route exact path="/contact">
           <ContactPage />
+        </Route>
+        <Route exact path="/signup">
+          <Sign />
         </Route>
       </Switch>
       <Footer />

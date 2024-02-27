@@ -39,7 +39,10 @@ function ShopCards() {
                 style={{ backgroundImage: `url(${item})` }}
                 className="bg-cover w-[204px] h-[223px] m-auto md:w-[330px]"
               >
-                <NavLink to="/" className="w-[204px] h-[223px] inline-block" />
+                <NavLink
+                  to="/product"
+                  className="w-[204px] h-[223px] inline-block"
+                />
               </div>
             );
           })}

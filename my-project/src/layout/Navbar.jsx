@@ -78,16 +78,16 @@ function Navbar() {
             >
               Contact
             </NavLink>
-            <a className="hover:text-black font-bold" href="">
+            <NavLink className="hover:text-black font-bold" to="/team">
               Pages
-            </a>
+            </NavLink>
           </div>
           <div className="flex gap-14 text-primaryColor sm:order-2">
             <div className="flex gap-3 items-center sm:hidden">
               <FontAwesomeIcon icon={faUser} />
               <button>Login</button>
               <p>/</p>
-              <button> Register</button>
+              <NavLink to="/signup"> Register</NavLink>
             </div>
             <div className="flex gap-10 items-center sm:text-2xl sm:text-aTag sm:gap-7">
               <a href="">
