@@ -12,8 +12,19 @@ import ContactPage from "./pages/ContactPage";
 import Sign from "./components/Form";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
+import LoginForm from "./components/LoginForm";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { tokenCheck } from "./store/actions/userAction";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      dispatch(tokenCheck(token));
+    }
+  }, []);
   return (
     <BrowserRouter>
       <ToastContainer />
@@ -25,7 +36,7 @@ function App() {
         <Route path="/shop">
           <ProductListPage />
         </Route>
-        <Route exact path="/product">
+        <Route exact path="/products">
           <ProductPage />
         </Route>
         <Route exact path="/about">
@@ -39,6 +50,9 @@ function App() {
         </Route>
         <Route exact path="/signup">
           <Sign />
+        </Route>
+        <Route exact path="/login">
+          <LoginForm />
         </Route>
       </Switch>
       <Footer />

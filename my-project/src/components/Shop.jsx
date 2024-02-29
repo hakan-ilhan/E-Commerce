@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ShopCards from "./ShopCards";
 import ProductList from "../layout/ProductList";
 
 import Brands from "../layout/Brands";
+import { useDispatch } from "react-redux";
+import { fetchCategories } from "../store/actions/globalAction";
 
 function Shop() {
   const data = [
@@ -115,6 +117,11 @@ function Shop() {
       colors: ["bg-primaryColor", "bg-dolar", "bg-alertColor", "bg-navBar"],
     },
   ];
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, []);
+
   return (
     <div>
       <ShopCards />

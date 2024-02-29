@@ -66,7 +66,7 @@ function Sign() {
         });
 
       reset();
-    }, 10000); // 2 saniye gecikme ekledik
+    }, 3000); // 2 saniye gecikme ekledik
   };
 
   if (roles.length < 1) {

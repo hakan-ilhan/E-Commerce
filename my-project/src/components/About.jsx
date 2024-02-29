@@ -21,14 +21,14 @@ function About() {
   return (
     <div>
       <div className="max-w-[1400px] m-auto flex justify-between px-4 py-12 items-center flex-wrap gap-24 ">
-        <div className="flex flex-col gap-8 w-[400px] sm:w-[330px] sm:items-center sm:m-auto">
-          <h5 className="text-categoryColor font-bold leading-6 tracking-[0.1px] sm:hidden">
+        <div className="flex flex-col gap-8 w-[400px] md:w-[330px] md:items-center md:m-auto">
+          <h5 className="text-categoryColor font-bold leading-6 tracking-[0.1px] md:hidden">
             ABOUT COMPANY
           </h5>
           <h1 className="text-6xl text-categoryColor font-bold leading-[80px] tracking-[0.2px] ">
             ABOUT US
           </h1>
-          <h4 className="text-xl leading-7 tracking-[0.2px] text-aTag sm:w-64 sm:text-center">
+          <h4 className="text-xl leading-7 tracking-[0.2px] text-aTag md:w-64 md:text-center">
             We know how large objects will act, but things on a small scale
           </h4>
           <NavLink
@@ -38,25 +38,25 @@ function About() {
             Get Quote Now
           </NavLink>
         </div>
-        <div>
+        <div className="md:m-auto">
           <img src={img} alt="" />
         </div>
       </div>
-      <div className="max-w-[1200px] flex justify-between py-8 m-auto items-center flex-wrap sm:justify-center sm:text-center sm:w-72 sm:gap-20">
+      <div className="max-w-[1200px] flex justify-between py-8 m-auto items-center flex-wrap md:justify-center md:text-center md:w-72 md:gap-20">
         <div className="flex flex-col gap-8 w-[391px] ">
-          <p className="text-sm leading-5 tracking-[0.2px] text-alertColor">
+          <p className="text-md leading-5 tracking-[0.2px] text-alertColor">
             Problems trying
           </p>
           <h2 className="text-2xl leading-8 tracking-[0.1px] text-categoryColor font-bold ">
             Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
           </h2>
         </div>
-        <p className="text-sm leading-5 tracking-[0.2px] text-aTag w-[545px] font-normal">
+        <p className="text-md leading-5 tracking-[0.2px] text-aTag w-[545px] font-normal">
           Problems trying to resolve the conflict between the two major realms
           of Classical physics: Newtonian mechanics{" "}
         </p>
       </div>
-      <div className="max-w-[1150px] flex justify-between font-bold text-6xl leading-[80px] tracking-[0.2px] text-categoryColor m-auto py-24 sm:w-[35%] flex-wrap sm:text-center sm:gap-20">
+      <div className="max-w-[1150px] flex justify-between font-bold text-6xl leading-[80px] tracking-[0.2px] text-categoryColor m-auto py-24 md:w-[35%] flex-wrap md:text-center md:gap-20 md:justify-center">
         <div>
           <h1>15K</h1>
           <h5 className="leading-6 tracking-[0.1px] text-aTag text-base">
@@ -101,14 +101,14 @@ function About() {
             realms of Classical physics: Newtonian mechanics{" "}
           </p>
         </div>
-        <div className="w-full flex gap-8 flex-wrap">
+        <div className="w-full flex gap-8 flex-wrap md:w-[50%] md:m-auto">
           {images.map((item, index) => {
             return <OurTeam key={index} item={item} index={index} />;
           })}
         </div>
       </div>
       <div className="bg-lightGrey py-24 ">
-        <div className="max-w-[1400px] m-auto flex flex-col gap-12 sm:w-[80%] sm:m-auto">
+        <div className="max-w-[1400px] m-auto flex flex-col gap-12 md:w-[80%] md:m-auto">
           <div className="text-center  m-auto flex flex-col gap-6">
             <h2 className="font-bold text-4xl leading-10 tracking-[0.2px] text-categoryColor">
               Big Companies Are Here

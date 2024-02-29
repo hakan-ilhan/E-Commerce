@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function OurTeam({ item, index }) {
   return (
     <div key={index} className="flex flex-col gap-4 m-auto">
-      <img className="w-[316px] h-[231px]" src={item} alt="" />
+      <img className="w-[316px] h-[231px] object-cover" src={item} alt="" />
       <div className="m-auto flex flex-col gap-2 text-center">
         <h5 className="leading-6 font-bold tracking-[0.1px] text-categoryColor">
           Username

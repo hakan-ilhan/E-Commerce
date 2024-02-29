@@ -10,7 +10,7 @@ const images = [img, img1, img2, img3, img4, img5];
 function Brands() {
   return (
     <div className="w-full bg-lightGrey py-24 flex-wrap">
-      <div className="max-w-[1400px] flex gap-20 m-auto items-center justify-center flex-wrap sm:flex-col ">
+      <div className="max-w-[1400px] flex gap-20 m-auto items-center justify-center flex-wrap md:flex-col ">
         {images.map((item, index) => {
           return <img key={index} src={item} alt="" className="" />;
         })}
