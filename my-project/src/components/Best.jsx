@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../assets/product.png";
 import img1 from "../assets/product1.png";
 import img2 from "../assets/product2.png";
@@ -9,6 +9,8 @@ import img6 from "../assets/product6.png";
 import img7 from "../assets/product7.png";
 import ProductList from "../layout/ProductList";
 import Brands from "../layout/Brands";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../store/actions/productAction";
 
 const data = [
   {
@@ -78,6 +80,11 @@ const data = [
   },
 ];
 function Best() {
+  const disptach = useDispatch();
+  useEffect(() => {
+    disptach(fetchProducts());
+  }, []);
+  const productData = useSelector((store) => store.productReducer.productList);
   return (
     <div className="bg-lightGrey">
       <div className="max-w-[1400px] m-auto flex flex-col gap-8">
@@ -86,7 +93,7 @@ function Best() {
         </h3>
         <hr className="text-hr" />
         <div className="max-w-[1300px] m-auto">
-          <ProductList data={data} />
+          <ProductList data={productData.products} />
         </div>
         <Brands />
       </div>

@@ -18,7 +18,7 @@ import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../store/actions/userAction";
-
+import { ShopDropDown } from "./Dropdown";
 function Navbar() {
   const userName = useSelector((store) => store.userReducer.name);
   const userEmail = useSelector((store) => store.userReducer.email);
@@ -77,9 +77,7 @@ function Navbar() {
             <NavLink to="/" className="hover:text-black font-bold" href="">
               Home
             </NavLink>
-            <NavLink to="/shop" className="hover:text-black font-bold" href="">
-              Shop
-            </NavLink>
+            <ShopDropDown />
             <NavLink to="/about" className="hover:text-black font-bold" href="">
               About
             </NavLink>
@@ -106,7 +104,7 @@ function Navbar() {
                 <NavLink to="/signup"> Register</NavLink>
               </div>
             ) : (
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center md:hidden">
                 <img
                   src={gravatarUrl}
                   alt=""

@@ -4,8 +4,11 @@ import ProductList from "../layout/ProductList";
 function HomeProduct() {
   const data = [
     {
-      images:
-        "https://s3-alpha-sig.figma.com/img/2305/7910/d190d178c2a7b276e896b9d38b982bf6?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cDTvO-e4xZ6xPBRw0q~qFdp3vrM6Nl3s~u~cJgJ1ODq5Xy41rxsuj7k4AvDtil6EiO-OfJRNCLpaEVyeXQq30GmfvH9XlSzytQKGz95z9kK4CoLX6NO-clYnIZvH2wqE4itLCoj0U7mmEqxpNUjjCs~pvet2RKcbT5Psr5eLfkjZ5EmNwzW51nvM43p49pFcv69S1AaNJqGydLnSKG0H3fZTP7Po-MqtPaMl0VL5p7fUViT2Fo3LK9iI4jbXpb4ZhevFD~Kl8ST8-UctU0WGRgxaimdz5r6U8SG~UCjxaaGDlJMxhLQ2Uro-mTDXEw41Xux6qA1G2-S-eqQfS-8Tyg__",
+      images: [
+        {
+          url: "https://s3-alpha-sig.figma.com/img/2305/7910/d190d178c2a7b276e896b9d38b982bf6?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cDTvO-e4xZ6xPBRw0q~qFdp3vrM6Nl3s~u~cJgJ1ODq5Xy41rxsuj7k4AvDtil6EiO-OfJRNCLpaEVyeXQq30GmfvH9XlSzytQKGz95z9kK4CoLX6NO-clYnIZvH2wqE4itLCoj0U7mmEqxpNUjjCs~pvet2RKcbT5Psr5eLfkjZ5EmNwzW51nvM43p49pFcv69S1AaNJqGydLnSKG0H3fZTP7Po-MqtPaMl0VL5p7fUViT2Fo3LK9iI4jbXpb4ZhevFD~Kl8ST8-UctU0WGRgxaimdz5r6U8SG~UCjxaaGDlJMxhLQ2Uro-mTDXEw41Xux6qA1G2-S-eqQfS-8Tyg__",
+        },
+      ],
       h5: "Graphic Design",
       a: "English Department",
       price: "$16.48",

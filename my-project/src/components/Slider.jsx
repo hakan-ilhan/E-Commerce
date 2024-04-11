@@ -64,7 +64,7 @@ function Slider() {
           We know how large objects will act, but things on a small scale.
         </h4>
         <NavLink
-          to="/shop"
+          to="/shopping"
           className="bg-headerShop text-center font-mont font-semibold w-[38%] py-3"
         >
           SHOP NOW

@@ -16,6 +16,8 @@ import LoginForm from "./components/LoginForm";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { tokenCheck } from "./store/actions/userAction";
+import { fetchCategories } from "./store/actions/globalAction";
+import { instance } from "./layout/axiosInstance";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +27,10 @@ function App() {
       dispatch(tokenCheck(token));
     }
   }, []);
+
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, []);
   return (
     <BrowserRouter>
       <ToastContainer />
@@ -33,10 +39,10 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
-        <Route path="/shop">
+        <Route path="/shopping">
           <ProductListPage />
         </Route>
-        <Route exact path="/products">
+        <Route exact path="/products/:id">
           <ProductPage />
         </Route>
         <Route exact path="/about">

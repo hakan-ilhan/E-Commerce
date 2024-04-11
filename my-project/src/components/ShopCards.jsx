@@ -2,20 +2,32 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import img from "../assets/card-item.png";
-import img1 from "../assets/card-item-1.png";
-import img2 from "../assets/card-item-2.png";
-import img3 from "../assets/card-item-3.png";
-import img4 from "../assets/card-item-4.png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+/* import { filteredProducts } from "../store/actions/productAction"; */
+import useQuery from "../layout/useQuery";
 
 function ShopCards() {
-  const data = [img, img1, img2, img3, img4];
+  const {
+    data,
+    loading,
+    error,
+    getQueryData,
+    setFilterText,
+    setFilterSort,
+    getQueryDatawithCategory,
+  } = useQuery();
+  const filterCategory = (id, gender) => {
+    getQueryDatawithCategory(id, gender);
+  };
   const categories = useSelector((store) => store.globalReducer.categories);
   const sortedData = categories.sort((a, b) => b.rating - a.rating);
   console.log("hebehfe:", sortedData);
   const firstFiveItems = sortedData.slice(0, 5);
   console.log("firstFive:", firstFiveItems);
+  const dispatch = useDispatch();
+  /* const clickHandler = (id) => {
+    dispatch(filteredProducts(id));
+  }; */
   return (
     <div className=" bg-lightGrey">
       <div className="flex flex-col items-center justify-center max-w-[1920px] m-auto">
@@ -41,12 +53,14 @@ function ShopCards() {
           {firstFiveItems.map((item, index) => {
             return (
               <div
+                onClick={() => filterCategory(item.id, item.gender)}
                 key={index}
                 style={{ backgroundImage: `url(${item.img})` }}
                 className="bg-cover  h-[223px] m-auto md:w-[330px]"
               >
+                {item.id}
                 <NavLink
-                  to={`/shopping/${item.gender}/${item.title}`}
+                  to={`/shop/${item.gender}/${item.title}`}
                   className="w-[204px] h-[223px] inline-block"
                 />
 

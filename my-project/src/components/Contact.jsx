@@ -14,14 +14,14 @@ function Contact() {
   return (
     <div>
       <div className="max-w-[1400px] m-auto flex justify-between px-4 pb-12  items-center flex-wrap gap-24 ">
-        <div className="flex flex-col gap-8 w-[400px] md:w-[80%] sm:items-center sm:m-auto sm:text-center md:gap-12">
+        <div className="flex flex-col gap-8 w-[400px] md:w-[80%] md:items-center md:m-auto md:text-center md:gap-12">
           <h5 className="text-categoryColor font-bold leading-6 tracking-[0.1px] md:text-xl">
             CONTACT US
           </h5>
           <h1 className="text-6xl text-categoryColor font-bold leading-[80px] tracking-[0.2px] md:text-4xl">
             Get in touch today!
           </h1>
-          <h4 className="text-xl leading-7 tracking-[0.2px] text-aTag sm:w-64 sm:text-center">
+          <h4 className="text-xl leading-7 tracking-[0.2px] text-aTag md:w-64 md:text-center">
             We know how large objects will act, but things on a small scale
           </h4>
           <div className="flex flex-col gap-4">

@@ -7,15 +7,31 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import img from "../assets/armchair.jfif";
 import img1 from "../assets/chair.jfif";
+import { useParams } from "react-router-dom";
+import { instance } from "../layout/axiosInstance";
 
 const images = [img, img1];
 
 function Product() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedProduct, setSelectedProduct] = useState();
+
+  const { id } = useParams();
+  useEffect(() => {
+    instance
+      .get(`products/${id}`)
+      .then((res) => {
+        setSelectedProduct(res.data);
+        console.log("ProductXX:", res.data);
+      })
+      .catch((err) => {
+        console.log("HATA ALIYORUM!", err);
+      });
+  }, []);
 
   const next = () => {
     const indx = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
@@ -26,7 +42,10 @@ function Product() {
     const indx = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     setCurrentIndex(indx);
   };
-
+  //currentData.images[0].url
+  if (!selectedProduct) {
+    return;
+  }
   return (
     <div className="max-w-full bg-lightGrey py-10">
       <div className="max-w-[1400px] flex flex-col gap-5 m-auto px-3 md:gap-12">
@@ -45,7 +64,9 @@ function Product() {
           <div className="flex flex-col gap-4 md:m-auto">
             <div
               className="w-[550px] h-[450px] bg-cover flex items-center justify-between duration-200 md:w-[350px]"
-              style={{ backgroundImage: `url(${images[currentIndex]})` }}
+              style={{
+                backgroundImage: `url(${selectedProduct.images[0].url})`,
+              }}
             >
               <FontAwesomeIcon
                 className="text-4xl text-white ml-5"
@@ -63,7 +84,9 @@ function Product() {
                 return (
                   <div
                     key={index}
-                    style={{ backgroundImage: `url(${item})` }}
+                    style={{
+                      backgroundImage: `url(${selectedProduct.images[0].url})`,
+                    }}
                     className={
                       index === currentIndex
                         ? "w-[100px] h-[75px] bg-cover opacity-[50%]"
@@ -76,7 +99,7 @@ function Product() {
           </div>
           <div className="flex flex-col gap-8 max-w-[420px] md:m-auto md:w-[300px]">
             <h4 className="text-categoryColor text-xl tracking-[0.2px]">
-              Floating Phone
+              {selectedProduct.name}
             </h4>
             <div className="flex gap-4 items-center">
               <div className="flex gap-2">
@@ -90,7 +113,7 @@ function Product() {
             </div>
             <div className="flex flex-col gap-3">
               <h3 className="text-2xl font-bold tracking-[0.2px] text-categoryColor">
-                $1,139.33
+                {selectedProduct.price}
               </h3>
               <div className="flex gap-2">
                 <p className="text-sm text-aTag tracking-[0.2px] font-bold">
@@ -103,9 +126,7 @@ function Product() {
               </div>
             </div>
             <p className="text-sm text-p tracking-[0.2px] mt-4">
-              Met minim Mollie non desert Alamo est sit cliquey dolor do met
-              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
-              venial consequent sent nostrum met.
+              {selectedProduct.description}
             </p>
             <hr className="text-mutedCcolor border-[1px]" />
             <div className="flex gap-2">
