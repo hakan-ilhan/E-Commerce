@@ -3,31 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-/* import { filteredProducts } from "../store/actions/productAction"; */
+
 import useQuery from "../layout/useQuery";
 
 function ShopCards() {
-  const {
-    data,
-    loading,
-    error,
-    getQueryData,
-    setFilterText,
-    setFilterSort,
-    getQueryDatawithCategory,
-  } = useQuery();
+  const { getQueryDatawithCategory, getQueryOffset } = useQuery();
   const filterCategory = (id, gender) => {
     getQueryDatawithCategory(id, gender);
   };
   const categories = useSelector((store) => store.globalReducer.categories);
   const sortedData = categories.sort((a, b) => b.rating - a.rating);
-  console.log("hebehfe:", sortedData);
+
   const firstFiveItems = sortedData.slice(0, 5);
-  console.log("firstFive:", firstFiveItems);
-  const dispatch = useDispatch();
-  /* const clickHandler = (id) => {
-    dispatch(filteredProducts(id));
-  }; */
+
   return (
     <div className=" bg-lightGrey">
       <div className="flex flex-col items-center justify-center max-w-[1920px] m-auto">

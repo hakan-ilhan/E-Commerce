@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { postLogin } from "../store/actions/userAction";
 import { useHistory } from "react-router-dom";
+import Brands from "../layout/Brands";
 
 function LoginForm() {
   const history = useHistory();
@@ -20,8 +21,13 @@ function LoginForm() {
     dispatch(postLogin(data, history, push));
   };
 
+  const hehehe = () => {
+    history.push("/login/3131");
+  };
+
   return (
     <div className="py-24 ">
+      <button onClick={hehehe}>123</button>
       <form
         className="max-w-lg m-auto flex flex-col gap-5 text-categoryColor"
         onSubmit={handleSubmit(onSubmit)}

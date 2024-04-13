@@ -10,10 +10,13 @@ import {
   DropdownItem,
 } from "reactstrap";
 import { useHistory } from "react-router-dom";
-/* import { filteredbyText } from "../store/actions/productAction"; */
+import ReactPaginate from "react-paginate";
 
 function ProductList({ data, total }) {
   const history = useHistory();
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 25;
+  const pageCount = Math.ceil(data.length / itemsPerPage);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
   const {
@@ -23,12 +26,18 @@ function ProductList({ data, total }) {
     setFilterText,
     setFilterSort,
     getQueryFromUrl,
+    getQueryOffset,
   } = useQuery();
-
+  const handlePageClick = ({ nextSelectedPage }) => {
+    setCurrentPage(nextSelectedPage);
+    const offset = nextSelectedPage * itemsPerPage;
+    getQueryOffset(25, offset);
+  };
   const filterProduct = () => {
     getQueryData();
   };
   const dispatch = useDispatch();
+
   const handleChange = (e) => {
     setFilterText(e.target.value);
     console.log("inputText:", e.target.value);
@@ -40,12 +49,10 @@ function ProductList({ data, total }) {
       getQueryFromUrl();
     }
   }, []);
-
-  /* useEffect(() => {
-    if (filterText) {
-      dispatch(filteredbyText(filterText));
-    }
-  }, [filterText]); */
+  const allProducts = useSelector((store) => store.productReducer.productList);
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const paginationOffSetParam = urlSearchParams.get("offset");
+  console.log("Check : ", paginationOffSetParam);
 
   return (
     <div className="max-w-[1300px]  m-auto py-12">
@@ -146,6 +153,30 @@ function ProductList({ data, total }) {
           })}
         </div>
       )}
+      <div className="custom-container font-mont font-semibold flex justify-center">
+        <ReactPaginate
+          className=""
+          nextLabel=">>"
+          onClick={handlePageClick}
+          pageRangeDisplayed={2}
+          marginPagesDisplayed={1}
+          initialPage={paginationOffSetParam / 25}
+          pageCount={allProducts.total / 25}
+          previousLabel="<<"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
+          previousClassName="page-item"
+          previousLinkClassName="page-link"
+          nextClassName="page-item"
+          nextLinkClassName="page-link"
+          breakLabel="..."
+          breakClassName="page-item"
+          breakLinkClassName="page-link"
+          containerClassName="pagination"
+          activeClassName="active"
+          renderOnZeroPageCount={null}
+        />
+      </div>
     </div>
   );
 }

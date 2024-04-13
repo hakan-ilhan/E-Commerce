@@ -5,6 +5,7 @@ import img2 from "../assets/Vector-1.svg";
 import img3 from "../assets/Vector-2.svg";
 import img4 from "../assets/Vector-3.svg";
 import img5 from "../assets/Vector-4.svg";
+
 const images = [img, img1, img2, img3, img4, img5];
 
 function Brands() {

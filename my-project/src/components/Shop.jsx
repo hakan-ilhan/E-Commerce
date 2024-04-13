@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ShopCards from "./ShopCards";
 import ProductList from "../layout/ProductList";
-import { BrowserRouter, Route } from "react-router-dom";
 import Brands from "../layout/Brands";
 import { useDispatch, useSelector } from "react-redux";
-
 import { fetchProducts } from "../store/actions/productAction";
-
 import useQuery from "../layout/useQuery";
 
 function Shop() {
@@ -14,6 +11,7 @@ function Shop() {
   const dispatch = useDispatch();
   const currentUrl = window.location.href;
   console.log("URL:", currentUrl);
+
   useEffect(() => {
     if (currentUrl.includes("category")) {
       return;
@@ -30,12 +28,7 @@ function Shop() {
   return (
     <div>
       <ShopCards />
-      {/* <Route path="/shop/:gender/:category">
-        <Test />
-      </Route> */}
-      {/* <Route exact path="/shop"> */}
       <ProductList data={productData.products} total={productData.total} />
-      {/* </Route> */}
       <Brands />
     </div>
   );

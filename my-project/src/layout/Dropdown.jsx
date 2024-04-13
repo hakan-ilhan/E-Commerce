@@ -81,7 +81,7 @@ export const ShopDropDown = () => {
                 className="font-mont font-bold text-lg text-primary-color"
                 header
               >
-                KadÄ±n
+                Kadın
               </DropdownItem>
               {renderDropdownItems("k")}
             </div>
