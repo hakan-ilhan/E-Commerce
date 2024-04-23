@@ -73,7 +73,7 @@ function Navbar() {
           <div className="flex gap-16 items-center md:order-1">
             <h3 className="font-mont text-3xl">Bandage</h3>
           </div>
-          <div className="flex gap-8 text-aTag text-lg md:order-3 md:flex-col md:m-auto md:w-full md:items-center">
+          <div className="flex gap-8 text-aTag text-lg md:order-3 md:flex-col md:m-auto md:w-full md:items-center text-center items-center">
             <NavLink to="/" className="hover:text-black font-bold" href="">
               Home
             </NavLink>
